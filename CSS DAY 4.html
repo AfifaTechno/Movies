@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #500;
+            padding: 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Three-Column Layout */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        .pricing-card {
+            flex: 1;
+            background: 100;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .pricing-card h2 {
+            margin-bottom: 10px;
+        }
+        .pricing-card p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Brand</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Three Column Pricing Table -->
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <h2>Bronze</h2>
+            <p>Rs 999/month</p>
+        </div>
+        <div class="pricing-card">
+            <h2>Silver</h2>
+            <p>Rs 1999/month</p>
+        </div>
+        <div class="pricing-card">
+            <h2>Gold</h2>
+            <p>Rs 2999/month</p>
+        </div>
+    </div>
+</body>
+</html>
